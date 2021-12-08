@@ -7,7 +7,7 @@ const theStranger = createBook({
   price: 30,
 });
 
-const createBestSeller = (book, discount) => {
+const bestSellerDecorator = (book, discount) => {
   return {
     ...book,
     discount,
@@ -16,4 +16,4 @@ const createBestSeller = (book, discount) => {
   };
 };
 
-const bestSeller = createBestSeller(theStranger, 5);
+const bestSeller = bestSellerDecorator(theStranger, 5);
